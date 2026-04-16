@@ -1,0 +1,51 @@
+{
+  "recipes": [
+    {
+      "incredients": "Classic dosa batter requires 3 cups of parboiled or Sona Masuri rice, 1 cup of whole urad dal (white lentils), 1 teaspoon of methi seeds (fenugreek) for fermentation/flavor, and 1/4 cup of poha (flattened rice) for lightness. These ingredients are soaked, ground into a smooth paste, and fermented for 8-12 hours, then cooked with salt and oil/ghee",
+      "origin": "Indian",
+      "title": "Dhosa",
+      "id": "pGTI9bQ9e5E"
+    },
+    {
+      "incredients": "Essential homemade pizza ingredients include bread or all-purpose flour, yeast, warm water, olive oil, salt, and sugar for the dough. Toppings generally require pizza sauce (or crushed tomatoes), mozzarella cheese, and favorites like pepperoni, vegetables, or fresh herbs. For best results, use active dry or instant yeast and bake at high heat (450–550°F)",
+      "origin": "Italian",
+      "title": "Pizza",
+      "id": "f87I5RvT3TU"
+    },
+    {
+      "incredients": "Common pasta recipe ingredients include pasta (penne/fusilli), olive oil or butter, garlic, onions, tomatoes, and vegetables like carrots or beans. Flavor is added with salt, pepper, Kashmiri chili powder, garam masala, and mixed herbs, often finished with cheese. For white sauce, butter, flour, and milk are essential.",
+      "origin": "Italian",
+      "title": "Pasta",
+      "id": "ekBltVSdyy4"
+    },
+    {
+      "incredients": "Paneer Tikka Masala combines marinated, grilled paneer cubes (300-350g) and veggies (onion, capsicum) with a rich gravy. Key ingredients include thick curd (yogurt), ginger-garlic paste, kasuri methi (dried fenugreek leaves), and spices like Kashmiri red chili powder, garam masala, and coriander powder",
+      "title": "Panner Tikka Masala",
+      "origin": "Indian",
+      "id": "5MXFhKKHQPc"
+    },
+    {
+      "incredients": "The essential ingredients for basic steamed rice are rice (1 cup), water (\n–\n cups), and optionally salt (1 tsp) and butter/oil (1 tsp) for flavor. For optimal results, rinse the rice 2–3 times to remove starch and let it soak for 15–20 minutes before cooking to ensure fluffy grains",
+      "title": "Maxican Rice",
+      "origin": "Maxican",
+      "id": "r3K0zMUZgC4"
+    }
+  ],
+  "users": [
+    {
+      "name": "Yash Bhakta",
+      "email": "yash@gmail.com",
+      "password": "123",
+      "role": "admin",
+      "id": "012vUt0MPkQ"
+    },
+    {
+      "name": "Anashail Saiyed",
+      "email": "anash@gmail.com",
+      "password": "123",
+      "role": "user",
+      "id": "lrvGka2psXI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
