@@ -17,7 +17,7 @@ const App = () => {
 
   useEffect(()=>{
     dispatch(loadUserFromStorage());
-  },[dispatch]);
+  },[dispatch]);;
 
   return (
     <>

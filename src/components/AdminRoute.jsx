@@ -5,11 +5,25 @@ import { useSelector } from 'react-redux';
 const AdminRoute = ({ children }) => {
     const { isAuthenticated, currentUser } = useSelector(state => state.user);
     
-    if (!isAuthenticated) {
+    // Fallback to localStorage if Redux state is not available
+    let user = currentUser;
+    let isAuth = isAuthenticated;
+    
+    if (!user) {
+        const savedUser = localStorage.getItem('user');
+        if (savedUser) {
+            user = JSON.parse(savedUser);
+            isAuth = true;
+        }
+    }
+    
+    // Check if user is authenticated
+    if (!isAuth || !user) {
         return <Navigate to="/login" replace />;
     }
 
-    if (currentUser && currentUser.role !== 'admin') {
+    // Check if user has admin role
+    if (!user.role || user.role !== 'admin') {
         return <Navigate to="/" replace />;
     }
 

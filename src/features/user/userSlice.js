@@ -28,9 +28,13 @@ const userSlice=createSlice({
     },
     reducers:{
         loginUser:(state,action)=>{
-            state.currentUser=action.payload;
-            state.isAuthenticated=true;
-            localStorage.setItem('user',JSON.stringify(action.payload));
+            const user = action.payload;
+            if(!user.role) {
+                user.role = 'user';
+            }
+            state.currentUser = user;
+            state.isAuthenticated = true;
+            localStorage.setItem('user',JSON.stringify(user));
         },
         logoutUser:(state)=>{
             state.currentUser=null;
@@ -40,8 +44,12 @@ const userSlice=createSlice({
         loadUserFromStorage:(state)=>{
             const savedUser=localStorage.getItem('user');
             if(savedUser){
-                state.currentUser=JSON.parse(savedUser);
-                state.isAuthenticated=true;
+                const user = JSON.parse(savedUser);
+                if(!user.role) {
+                    user.role = 'user';
+                }
+                state.currentUser = user;
+                state.isAuthenticated = true;
             }
         }
     },

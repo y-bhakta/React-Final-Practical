@@ -5,7 +5,14 @@ import { useSelector } from 'react-redux';
 const ProtectedRoute = ({ children }) => {
     const { isAuthenticated } = useSelector(state => state.user);
     
-    if (!isAuthenticated) {
+    // Fallback to localStorage if Redux state is not available
+    let isAuth = isAuthenticated;
+    if (!isAuth) {
+        const savedUser = localStorage.getItem('user');
+        isAuth = !!savedUser;
+    }
+    
+    if (!isAuth) {
         return <Navigate to="/login" replace />;
     }
 

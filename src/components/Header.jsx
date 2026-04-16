@@ -13,7 +13,6 @@ const Header = () => {
         dispatch(logoutUser());
         navigate('/login');
     }
-console.log(currentUser);
 
     return (
         <header className="modern-header">
@@ -28,7 +27,7 @@ console.log(currentUser);
                             <a className="nav-link text-white" href="/">Home</a>
                         </li>
                         {
-                            currentUser.role==="admin"
+                            currentUser && currentUser.role==="admin"
                                 ? <>
                                     <li className="nav-item">
                                         <a className="nav-link text-white" href="/add-recipe">Add Recipe</a>
